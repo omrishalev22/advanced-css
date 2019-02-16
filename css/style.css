@@ -40,6 +40,49 @@ body {
     animation-timing-function: ease-out;
     margin-bottom: 6rem; }
 
+.header-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all .2s; }
+  .header-secondary:hover {
+    transform: skewY(2deg) skew(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.section-about {
+  background: #f7f7f7;
+  padding: 27rem 0;
+  margin-top: -20vh; }
+
+.features {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.81), rgba(40, 180, 133, 0.8)), url(../../img/nat-4.jpg);
+  background-size: cover;
+  padding: 20rem 0;
+  transform: skewY(-7deg);
+  margin-top: -15rem; }
+  .features > * {
+    transform: skewY(7deg); }
+
+.section-tours {
+  padding: 25rem 0;
+  background-color: #f7f7f7;
+  margin-top: -12vh; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -85,6 +128,77 @@ body {
   animation: moveInBottom .5s ease-out;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 0.3rem;
+  display: inline-block;
+  color: #55c57a;
+  border-bottom: 0.1rem solid #55c57a;
+  transition: all .2s;
+  background: none; }
+
+.btn-text:hover {
+  background: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2rem); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0rem); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: .2rem;
+    position: absolute;
+    transition: all .2s;
+    z-index: 10;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 11;
+      outline: 1.5rem solid #55c57a; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all .2s;
+  border-radius: 1%;
+  padding: 2.5rem; }
+  .feature-box__icon {
+    display: block;
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: 5rem;
+    background-image: linear-gradient(to right, #28b485, #7ed56f);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box__text:before {
+    display: block;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 5rem; }
+  .feature-box:hover {
+    transform: translateY(-2rem); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.81), rgba(40, 180, 133, 0.8)), url(../../img/hero.jpg);
@@ -103,3 +217,41 @@ body {
     top: 40%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    clear: both;
+    display: block; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - (2 * 6rem)) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - (3 * 6rem)) / 4); }
+  .row .col-2-of-3 {
+    width: calc(2 * (calc((100% - (2 * 6rem)) / 3)) + 6rem); }
+  .row .col-2-of-4 {
+    width: calc(2 * (calc((100% - (3 * 6rem)) / 4)) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * (calc((100% - (3 * 6rem)) / 4)) + 2 * 6rem); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
