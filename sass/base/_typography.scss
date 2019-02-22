@@ -51,6 +51,10 @@ body {
     transform:skewY(2deg) skew(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
+
+  &--small {
+    font-size: 1.5rem;
+  }
 }
 
 .heading-tertiary {
